@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.daygo.servlet.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Login.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>GoodsServlet</servlet-name>
+  	<servlet-class>com.daygo.servlet.GoodsServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>GoodsServlet</servlet-name>
+  	<url-pattern>/Good.html</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>UserCginfoServlet</servlet-name>
+  	<servlet-class>com.daygo.servlet.UserCginfoServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UserCginfoServlet</servlet-name>
+  	<url-pattern>/UserCginfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>UserCenter</servlet-name>
+  	<servlet-class>com.daygo.servlet.UserCenterServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>UserCenter</servlet-name>
+  	<url-pattern>/UserCenter.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Search</servlet-name>
+  	<servlet-class>com.daygo.servlet.SearchServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Search</servlet-name>
+  	<url-pattern>/Search.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShoppingCart</servlet-name>
+  	<servlet-class>com.daygo.servlet.ShoppingCartServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShoppingCart</servlet-name>
+  	<url-pattern>/ShoppingCart.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Pay</servlet-name>
+  	<servlet-class>com.daygo.servlet.PayServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Pay</servlet-name>
+  	<url-pattern>/Pay.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<servlet-class>com.daygo.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Sell</servlet-name>
+  	<servlet-class>com.daygo.servlet.SellServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Sell</servlet-name>
+  	<url-pattern>/Sell.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddGoods</servlet-name>
+  	<servlet-class>com.daygo.servlet.AddGoodsServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddGoods</servlet-name>
+  	<url-pattern>/AddGoods.html</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>Comment</servlet-name>
+  	<servlet-class>com.daygo.servlet.CommentServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Comment</servlet-name>
+  	<url-pattern>/Comment.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Address</servlet-name>
+  <servlet-class>com.daygo.servlet.AddressServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Address</servlet-name>
+  <url-pattern>/AddressServlet</url-pattern>
+  </servlet-mapping>
+ <!-- 登陆验证码Kaptcha 2-->
+	<servlet>
+		<servlet-name>Kaptcha</servlet-name>
+		<servlet-class>
+			com.daygo.servlet.KaptchaServlet
+		</servlet-class>
+		<init-param>
+			<description>图片边框，合法值：yes , no</description>
+			<param-name>kaptcha.border</param-name>
+			<param-value>yes</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				边框颜色，合法值： r,g,b (and optional alpha) 或者
+				white,black,blue.
+			</description>
+			<param-name>kaptcha.border.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+		<init-param>
+			<description>边框厚度，合法值：>0</description>
+			<param-name>kaptcha.border.thickness</param-name>
+			<param-value>1</param-value>
+		</init-param>
+		<init-param>
+			<description>图片宽 </description>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>100</param-value>
+		</init-param>
+		<init-param>
+			<description>图片高 </description>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>50</param-value>
+		</init-param>
+		<init-param>
+			<description>图片实现类</description>
+			<param-name>kaptcha.producer.impl</param-name>
+			<param-value>
+				com.google.code.kaptcha.impl.DefaultKaptcha
+			</param-value>
+		</init-param>
+		<init-param>
+			<description>文本实现类</description>
+			<param-name>kaptcha.textproducer.impl</param-name>
+			<param-value>
+				com.google.code.kaptcha.text.impl.DefaultTextCreator
+			</param-value>
+		</init-param>
+		<init-param>
+			<description>文本集合，验证码值从此集合中获取</description>
+			<param-name>kaptcha.textproducer.char.string</param-name>
+			<param-value>1234567890abcdefghigklmnopqrstuvwxyz</param-value>
+			  <!--<param-value>abcde2345678gfynmnpwx</param-value>-->
+			<!--<param-value>慕课网教程验证码实例</param-value> -->
+		</init-param>
+		<init-param>
+			<description>验证码长度 </description>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>4</param-value>
+		</init-param>
+		<init-param>
+			<description>字体 Arial, Courier</description>
+			<param-name>kaptcha.textproducer.font.names</param-name>
+			<param-value>Arial, Courier</param-value>
+		</init-param>
+		<init-param>
+			<description>字体大小</description>
+			<param-name>kaptcha.textproducer.font.size</param-name>
+			<param-value>30</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				字体颜色，合法值： r,g,b 或者 white,black,blue.
+			</description>
+			<param-name>kaptcha.textproducer.font.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+		<init-param>
+			<description>文字间隔 2</description>
+			<param-name>kaptcha.textproducer.char.space</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<description>干扰实现类</description>
+			<param-name>kaptcha.noise.impl</param-name>
+			<param-value>
+				<!-- com.google.code.kaptcha.impl.NoNoise -->
+				com.google.code.kaptcha.impl.DefaultNoise
+			</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				干扰颜色，合法值： r,g,b 或者 white,black,blue.
+			</description>
+			<param-name>kaptcha.noise.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				图片样式： 水纹com.google.code.kaptcha.impl.WaterRipple
+				鱼眼com.google.code.kaptcha.impl.FishEyeGimpy
+				阴影com.google.code.kaptcha.impl.ShadowGimpy
+			</description>
+			<param-name>kaptcha.obscurificator.impl</param-name>
+			<param-value>
+				com.google.code.kaptcha.impl.WaterRipple
+			</param-value>
+		</init-param>
+		<init-param>
+			<description>背景实现类</description>
+			<param-name>kaptcha.background.impl</param-name>
+			<param-value>
+				com.google.code.kaptcha.impl.DefaultBackground
+			</param-value>
+		</init-param>
+		<init-param>
+			<description>背景颜色渐变，开始颜色</description>
+			<param-name>kaptcha.background.clear.from</param-name>
+			<param-value>green</param-value>
+		</init-param>
+		<init-param>
+			<description>背景颜色渐变，结束颜色</description>
+			<param-name>kaptcha.background.clear.to</param-name>
+			<param-value>white</param-value>
+		</init-param>
+		<init-param>
+			<description>文字渲染器</description>
+			<param-name>kaptcha.word.impl</param-name>
+			<param-value>
+				com.google.code.kaptcha.text.impl.DefaultWordRenderer
+			</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				session中存放验证码的key键
+			</description>
+			<param-name>kaptcha.session.key</param-name>
+			<param-value>KAPTCHA_SESSION_KEY</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				The date the kaptcha is generated is put into the
+				HttpSession. This is the key value for that item in the
+				session.
+			</description>
+			<param-name>kaptcha.session.date</param-name>
+			<param-value>KAPTCHA_SESSION_DATE</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Kaptcha</servlet-name>
+		<url-pattern>/randomcode.jpg</url-pattern>
+	</servlet-mapping>
+
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+    <filter>
+        <filter-name>UnicodeFilter</filter-name>
+        <filter-class>com.daygo.servlet.UnicodeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UnicodeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.daygo.servlet.LoginFilter</filter-class>
+        <init-param>
+            <param-name>noFilterPaths</param-name>
+            <param-value>index.jsp;login.jsp;Login.html;Good.html;goods.jsp;Search.html;search.jsp;randomcode.jpg;js;css;data;images</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> 
+</web-app>

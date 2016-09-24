@@ -1,0 +1,6 @@
+login.jsp 验证码部分、后面
+user.js   Userlogin()
+header.jsp 点击登录原网页跳转
+loginservlet
+kaptchaservlet
+web.xml
